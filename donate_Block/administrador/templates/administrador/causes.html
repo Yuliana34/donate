@@ -1,0 +1,243 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!---------------------------------------------------ESTATICOS------------------------------------------>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+  <title>freeDonate.Dapp </title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/rubick.css' %}" rel="stylesheet"/>
+  
+    
+                                                            <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <!---------------------------------------------------ESTATICOS------------------------------------------>
+ <!--BARRA nueva-->
+ <nav class="navbar navbar-expand-lg " style="background-color: #83bfeb;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home/">freeDonate.Dapp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home/causas">Causas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home/formulario">Nueva Transaccion</a>
+          </li>
+                   <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'all_transactions' %}">Todas las transacciones</a>
+          </li>
+          
+          
+        </ul>
+        </div>
+    </div>
+  </nav>
+  <!--BARRA nueva-->
+</head>
+     
+      
+  </head>
+  <!--Causas-->
+  <body>
+    <!--tarjetas-->
+       <div class="container">
+        <p class="text-center fs-1 fw-bold" >Nuestras causas.</p>
+        <div class="card mb-3">
+          <img src="https://media.istockphoto.com/id/1375911012/es/foto/triste-ni%C3%B1o-pobre-indio-sosteniendo-tengo-hambre-letrero-mirando-la-c%C3%A1mara-en-el-fondo-de-blu.jpg?s=612x612&w=0&k=20&c=sVy9IkhiI2qWA5ObU-WQgNgDRuBZa61ndmAQZ99RyZY=" height="400"  class="card-img-top" alt="..."> 
+          <div class="card-body">
+            <h5 class="card-title">Desnutrición crónica infantil</h5>
+            <p class="lh-base">Ayudar a los niños con desnutrición es una responsabilidad moral y social que debemos asumir como comunidad global. La desnutrición infantil no solo afecta a los niños en el presente, sino que tiene repercusiones a largo plazo en sus vidas y en el desarrollo de la sociedad en su conjunto. Aquí hay varias razones por las que debemos comprometernos a combatir este problema:
+
+              Derecho a la Vida y la Salud,
+              
+              Desarrollo Físico y Cognitivo,
+              
+              Impacto Económico,
+              
+              Equidad y Justicia Social,
+              
+              Cumplimiento de Objetivos de Desarrollo Sostenible (ODS),
+              
+              Responsabilidad Humanitaria,
+              
+              En conclusión, ayudar a los niños con desnutrición no solo es una obligación moral, sino también una inversión en un futuro mejor y más equitativo para todos. Al garantizar que cada niño reciba la nutrición que necesita, estamos construyendo una base sólida para un mundo más saludable, justo y próspero.</p>
+            
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Bienestar de la niñez y adolescencia</h5>
+            <p class="card-text">El bienestar de la niñez y la adolescencia es fundamental para el desarrollo integral de la sociedad. Ayudar a estos grupos es una responsabilidad moral y práctica que tiene repercusiones a largo plazo en múltiples dimensiones. Aquí hay varias razones por las que debemos comprometernos a mejorar el bienestar de niños y adolescentes:
+
+              Derechos Fundamentales,
+              
+              Desarrollo Integral,
+              
+              Prevención de Problemas Futuros,
+              
+              Impacto en la Comunidad,
+              
+              Equidad y Justicia Social,
+              
+              Cumplimiento de los Objetivos de Desarrollo Sostenible (ODS),
+              Responsabilidad Intergeneracional,
+              
+              Desarrollo Emocional y Psicológico,
+              
+              En conclusión, ayudar al bienestar de la niñez y la adolescencia es esencial no solo por razones morales, sino también por el impacto positivo que tiene en la sociedad en su conjunto. Al invertir en el futuro de nuestros jóvenes, estamos construyendo un mundo más saludable, equitativo y próspero para todos..</p>
+            
+          </div>
+          <img src="https://plus.unsplash.com/premium_photo-1661266853185-dc6e7a783cf5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fG5pJUMzJUIxbyUyMHklMjBhZG9sZWNlbnRlfGVufDB8fDB8fHww" height="400" class="card-img-top" alt="...">     
+        </div>
+        <ul></ul>
+        <div class="card mb-3" >
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBlcnJpdG9zfGVufDB8fDB8fHww" height="400" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Bienestar de los peliditos abandonados</h5>
+            <p class="card-text">Ayudar al bienestar de los gatos y perros es una responsabilidad ética y moral que todos compartimos como parte de una sociedad compasiva y justa. Estos animales, que a menudo forman parte integral de nuestras familias y comunidades, merecen ser tratados con respeto y cuidado. Aquí hay varias razones por las que debemos comprometernos a mejorar el bienestar de los gatos y perros:
+
+              Derecho a una Vida Digna,
+              
+              Compañía y Beneficios Emocionales,
+              
+              Reducción del Abandono y la Crueldad,
+              
+              Salud Pública,
+              
+              Conciencia y Educación,
+              
+              Ecosistema y Biodiversidad,
+              
+              Responsabilidad Social,
+              
+              Relaciones Interespecie,
+              
+              En conclusión, ayudar al bienestar de los gatos y perros es una responsabilidad que trasciende la simple bondad. Es una cuestión de derechos, salud pública, educación, y responsabilidad social. Al asegurar que estos animales vivan vidas saludables y felices, estamos construyendo una sociedad más compasiva, justa y equilibrada..</p>
+            
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Educacion</h5>
+            <p class="card-text">Asegurar que los niños y adolescentes tengan acceso a una educación de calidad es una responsabilidad fundamental que debemos asumir como sociedad. La educación no solo es un derecho humano básico, sino también una herramienta poderosa para el desarrollo individual y colectivo. Aquí se presentan varias razones por las que debemos comprometernos a proporcionar una educación de calidad para todos los niños y adolescentes:
+
+              Derecho Humano Fundamental,
+              
+              Desarrollo Personal,
+              
+              Igualdad de Oportunidades,
+              
+              Desarrollo Económico,
+              
+              Salud y Bienestar,
+              
+              Participación Ciudadana,
+              
+              Innovación y Progreso Social,
+              
+              Prevención del Ciclo de Pobreza,
+              
+              Promoción de la Paz y la Tolerancia,
+              
+              
+              En conclusión, proporcionar una educación de calidad para todos los niños y adolescentes es una inversión en el futuro de la humanidad. No solo garantiza el desarrollo personal y profesional de los jóvenes, sino que también promueve el progreso social, económico y cultural de las naciones. Al asegurar que cada niño y adolescente tenga acceso a una educación de calidad, estamos construyendo un mundo más justo, equitativo y próspero para todos.</p>
+            
+          </div>
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVkdWNhdGlvbiUyMGNoaWxkcmVuc3xlbnwwfHwwfHx8MA%3D%3D" height="400"  class="card-img-top" alt="...">
+        </div>
+        <ul></ul>
+        <div class="card mb-3">
+          <img src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG9nYXJ8ZW58MHx8MHx8fDA%3D" height="400" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Techo para los abuelitos</h5>
+            <p class="card-text">Asegurar que los adultos mayores tengan una vivienda digna es una responsabilidad ética y social que refleja los valores de respeto, cuidado y solidaridad hacia quienes han contribuido a la sociedad durante su vida. Proporcionar una vivienda digna a nuestros ancianos no solo es un acto de justicia, sino también una necesidad para el bienestar de toda la comunidad. Aquí se presentan varias razones por las que debemos comprometernos a garantizar una vivienda digna para los adultos mayores:
+
+              Derecho Humano Fundamental,
+              
+              Agradecimiento y Respeto,
+              
+              Seguridad y Salud,
+              
+              Bienestar Emocional y Psicológico,
+              
+              Reducción de la Pobreza y Desigualdad,
+              
+              
+              Fortalecimiento de la Comunidad,
+              
+              Responsabilidad Ética,
+              
+              Promoción de la Autonomía,
+              
+              Prevención del Aislamiento Social,
+              
+              En conclusión, asegurar que los adultos mayores tengan una vivienda digna es una cuestión de justicia, respeto y humanidad. Es un acto de reconocimiento a su contribución a la sociedad y una inversión en el bienestar colectivo. Al garantizar viviendas adecuadas para nuestros ancianos, estamos construyendo una sociedad más justa, equitativa y solidaria, donde todos pueden vivir con dignidad y seguridad.</p>
+           
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Servicios medicos</h5>
+            <p class="card-text">Asegurar que los adultos mayores, niños, adolescentes, perros y gatos tengan acceso a servicios médicos de calidad es una responsabilidad fundamental que refleja nuestra compasión, ética y sentido de comunidad. Aquí se presentan varias razones por las que debemos comprometernos a proporcionar atención médica adecuada para estos grupos vulnerables:
+
+              Adultos Mayores
+              Derecho a la Salud,
+              
+              Prevención y Manejo de Enfermedades Crónicas,
+              
+              Apoyo Emocional y Psicológico,
+              
+              Niños y Adolescentes
+              Desarrollo Saludable,
+              
+              Vacunación y Prevención,
+              
+              Apoyo Psicológico y Nutricional,
+              
+              Perros y Gatos
+              Salud y Bienestar Animal,
+              
+              Prevención de Zoonosis,
+              
+              Promoción de la Esterilización,
+              
+              Razones Comunes para Todos
+              Responsabilidad Social,
+              
+              Prevención y Reducción de Costos,
+              
+              Calidad de Vida,
+              
+              Salud Pública,
+              
+              En conclusión, garantizar que los adultos mayores, niños, adolescentes, perros y gatos tengan acceso a servicios médicos de calidad es esencial para construir una sociedad justa, compasiva y saludable. Este compromiso refleja nuestros valores de respeto, cuidado y solidaridad, asegurando un futuro mejor y más equitativo para todos los miembros de nuestra comunidad..</p>
+            
+          </div>
+          <img src="https://plus.unsplash.com/premium_photo-1676325101744-ce4a45a331c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVkaWNvfGVufDB8fDB8fHww" height="400" class="card-img-top" alt="...">
+          </div>
+        <!--------Grandes---------->
+  
+       
+        <!--modal--> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+    </center>
+   
+  </body>
+<!-- FOOTER -->
+<footer class="footer footer-big " data-color="black" style="background-color: #83bfeb;" >
+  <div class="copyright">
+      © 2024 Blockchain freeDonate
+  </div>  
+</footer>
+<!-- END FOOTER -->

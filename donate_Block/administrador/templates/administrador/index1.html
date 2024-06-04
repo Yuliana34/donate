@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Blockchain
+{% endblock %}
+
+{% block content %}
+	<h1 class="text-center">Bienvenido a freeDonate</h1>
+	<h3>Ingresa tus datos para realizar la donacion </h3>
+	<ul>
+        <li><a href="{% url 'mine_block' %}">Minar</a></li>
+		<li><a href="{% url 'get_chain' %}">Obtener Cadena</a></li>
+		<li><a href="{% url 'is_valid' %}">Validar</a></li>
+        <li><a href="{% url 'all_transactions' %}">Todas la transacciones</a></li>
+        <br>
+        <li>
+            <form method="post" action="{% url 'add_donate_transaction' %}">
+                {% csrf_token %}
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" required>
+                <br>
+                <label>Correo</label>
+                <input type="email" name="correo" required>
+                <br>
+                <label>Monto</label>
+                <input type="number" name="monto" required>
+                <br>
+                <button type="submit" class="btn btn-primary">Agregar Transaction</button>
+            </form>
+        <br>
+		<li><a href="{% url 'connect_node' %}">Conectar nodo</a></li>
+		<li><a href="{% url 'replace_chain' %}">Reemplazar Cadena</a></li>
+		<li><a href="{% url 'get_transactions' %}">Obtener transacciones </a></li>
+	</ul>
+{% endblock %}

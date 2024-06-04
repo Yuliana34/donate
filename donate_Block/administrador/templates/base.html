@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		{% block title %}
+			Base 
+		{% endblock %}
+	</title>
+	<meta charset="utf-8" />
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+  <title>freeDonate.Dapp </title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+                                                        <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <!---------------------------------------------------ESTATICOS------------------------------------------>
+ <!--BARRA nueva-->
+ <nav class="navbar navbar-expand-lg " style="background-color: #83bfeb;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home/">freeDonate.Dapp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'get_chain' %}">Obtener</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'connect_node' %}">Conectar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'mine_block' %}">Minar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home/formulario">Nueva Transaccion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'is_valid' %}">Validar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'all_transactions' %}">Todas las transacciones</a>
+          </li>
+          
+          
+        </ul>
+        </div>
+    </div>
+  </nav>
+  <!--BARRA nueva-->
+</head>
+<body>
+	{% block content %} 
+	{% endblock %}
+</body>
+</html>
